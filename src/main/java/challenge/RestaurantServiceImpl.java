@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class RestaurantServiceImpl implements RestaurantService {
 
+	private RestaurantMongoRepository restaurantMongoRepository;
+
 	@Override
 	public NeighborhoodRedis findInNeighborhood(double x, double y) {
 		return null;
