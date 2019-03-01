@@ -37,7 +37,8 @@ public class RestaurantIntegrationTest {
         double y = 40.7858944;
 
         ResponseEntity<String> response = restTemplate.getForEntity("/restaurants/findInNeighborhood?x={x}&y={y}", String.class, x, y);
-
+        restTemplate.getForEntity("/restaurants/findInNeighborhood?x={x}&y={y}", String.class, x, y);
+        restTemplate.getForEntity("/restaurants/findInNeighborhood?x={x}&y={y}", String.class, x, y);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
     }
